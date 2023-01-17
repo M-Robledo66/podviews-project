@@ -10,9 +10,9 @@ const reviewSchema = new Schema({
 }, {
     timestamps: true
 })
-const Review = mongoose.model('Review', reviewSchema)
+export const Review = mongoose.model('Review', reviewSchema)
 
-module.exports = mongoose.model('Review', reviewSchema)
-export {
-  Review
-}
+// module.exports = mongoose.model('Review', reviewSchema)
+// export {
+//   Review
+// }

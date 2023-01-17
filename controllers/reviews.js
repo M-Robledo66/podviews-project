@@ -30,6 +30,7 @@ function index(req, res) {
       res.redirect('/reviews')
     })
   }
+  
 
 export {
   index,
