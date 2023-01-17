@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const reviewSchema = new Schema({
   title: String,
   rating: Number,
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 
 }, {
     timestamps: true
