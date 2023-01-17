@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Podviews!</h1>
+  <h2>All the Reviews!</h2>
+	<ul>
+  <% reviewss.forEach(review => { %>
+    <li>🌮 <%= review.name %> is <%= review.recommend ? 'recommend' : 'not recommend' %></li>
+  <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>

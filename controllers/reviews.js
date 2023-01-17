@@ -20,7 +20,7 @@ function index(req, res) {
     Review.find({})
     .then(reviews => {
       res.render('reviews/index', {
-        reviews: reviews,
+       reviews,
        title: "All Reviews",
       })
     })
