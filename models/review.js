@@ -1,3 +1,5 @@
+import mongoose from 'mongoose'
+
 const Schema = mongoose.Schema
 	
 const reviewSchema = new Schema({
@@ -9,6 +11,7 @@ const reviewSchema = new Schema({
 })
 const Review = mongoose.model('Review', reviewSchema)
 
+module.exports = mongoose.model('Review', reviewSchema)
 export {
   Review
 }

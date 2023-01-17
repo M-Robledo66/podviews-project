@@ -1,4 +1,3 @@
-// import npm packages
 import 'dotenv/config.js'
 import express from 'express'
 import path from 'path'
@@ -64,6 +63,7 @@ app.use(passDataToView)
 
 // router middleware
 app.use('/', indexRouter)
+app.use('/reviews', reviewsRouter)
 app.use('/auth', authRouter)
 
 // catch 404 and forward to error handler
