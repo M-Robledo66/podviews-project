@@ -2,14 +2,34 @@
 <link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>Podviews!</h1>
-  <h2>All the Podcasts!</h2>
-	<ul>
-  <% podcasts.forEach(podcast => { %>
-    <li>💬 <%= podcast.name %> is <%= podcast.recommend ? 'recommend' : 'not recommend' %></li>
-  <% }) %>
-  </ul>
-</section>
+
+<main>
+  <h1>Podcast List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Episode Number:</th>
+        <th>Host</th>
+        <th>Special Guest</th>
+        <th>URL Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%# Oh hey, this is an ejs comment! It starts with a # %>
+      <%# Write the line of EJS to iterate over movies using forEach %>
+      <% podcasts.forEach(podcast => { %>
+      <tr>
+          <td><%= podcast.title %></td>
+          <td><%= podcast.EpisodeNo %></td>
+          <td><%= podcast.host %></td>
+          <td><%= podcast.guest %></td>
+          <td><%= podcast.link  %></td>
+        </tr>
+      <%# Close the forEach using EJS here %>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
 
 <%- include('../partials/footer') %>

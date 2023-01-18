@@ -10,7 +10,7 @@ function index(req, res) {
   Podcast.find({})
     .then(podcasts => {
       res.render('podcasts/index', {
-       podcasts,
+       podcasts: podcasts,
        title: "All Podcast",
       })
     })

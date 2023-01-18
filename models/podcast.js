@@ -15,7 +15,7 @@ const podcastSchema = new Schema({
     type: String,
     required: true,
   },
-  episodeNo: Number,
+  EpisodeNo: Number,
   host:{
     type: String,
     required: true,
