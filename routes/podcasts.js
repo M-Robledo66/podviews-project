@@ -15,6 +15,8 @@ router.get('/:id', podcastsCtrl.show)
 
 router.delete("/:id", podcastsCtrl.delete)
 
+router.get("/:id/edit", podcastsCtrl.edit)
+
 
 
 export {

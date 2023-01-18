@@ -1,0 +1,47 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
+<%- include('../partials/nav') %>
+
+<main>
+
+
+    <h1><%= title %></h1>
+    <form 
+    id="new-form" 
+    action="/movies/<%= movie._id %>?_method=PUT" 
+    method="POST"
+  >
+    
+      <label for="title-input">Title:</label>
+      <input type="text" name="title" value="<%= podcast.title %>" id="title-input">
+
+      <label for="EpisodeNo">EpisodeNo:</label>
+    
+      <input 
+        type="text" 
+        name="EpisodeNo"
+        value="<%= podcast.EpisodeNo %>"
+        id="EpisodeNo"
+      >
+
+      <label for="host-input">Host:</label> 
+      <input type="text" name="host" value="<%= podcast.host %>" id="host-input
+
+
+      <label for="guest-input">Specail Guest:</label>
+      <input type="text" name="guest" value="<%= podcast.guest %>" id="guest-input
+
+      <label for="link-input">URL Link:</label>
+      <input type="text" name="link" id="link-input">
+     
+      <input type="text" name="link" value="<%= podcast.link %>" id="link-input
+
+      <button type="submit">Add Podcast</button>
+    
+
+    </form>
+    </main>
+
+
+<%- include("../partials/footer") %>
+

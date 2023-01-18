@@ -1,14 +1,31 @@
 import { Podcast } from "../models/podcast.js"
 
 
-function deletePodcast(req, res) {
-  Podcast.findByIdAndDelete(req.params.id)
-  .then(podcasts => {
-    res.redirect("/podcast")
+function edit(req, res) {
+  Podcast.findById(req.params.id)
+  .then(podcast => {
+    res.render("podcasts/edit", {
+      title: "Edit Podcast",
+      podcast, 
+     
+    })
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/podcast")
+    res.redirect("/")
+  })
+}
+
+
+
+function deletePodcast(req, res) {
+  Podcast.findByIdAndDelete(req.params.id)
+  .then(podcast => {
+    res.redirect("/podcasts")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/podcasts")
   })
 }
 
@@ -68,4 +85,5 @@ export {
   newPodcast as new, 
   show,
   deletePodcast as delete,
+  edit,
   }
