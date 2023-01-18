@@ -1,6 +1,44 @@
 import { Podcast } from "../models/podcast.js"
 
 
+function createReview(req, res) {
+Podcast.findById(req.params.id)
+  .then(podcast => {
+    podcast.reviews.push(req.body)
+    podcast.save()
+    .then(() => {
+      res.redirect(`/podcasts/$podcast._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+
+
+function update(req, res) {
+  req.body.nowShowing = !!req.body.nowShowing
+  for (const key in req.body) {
+    // Key can be "title", "releaseYear", etc.
+    if(req.body[key] === "") delete req.body[key]
+    // req.body.releaseYear is "" so we delete it.
+  }
+  Podcast.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(podcast => {
+    res.redirect(`/podcasts/${podcast._id}`) 
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 function edit(req, res) {
   Podcast.findById(req.params.id)
   .then(podcast => {
@@ -86,4 +124,6 @@ export {
   show,
   deletePodcast as delete,
   edit,
+  update,
+  createReview,
   }

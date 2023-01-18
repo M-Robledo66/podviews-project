@@ -17,7 +17,9 @@ router.delete("/:id", podcastsCtrl.delete)
 
 router.get("/:id/edit", podcastsCtrl.edit)
 
+router.put("/:id", podcastsCtrl.update)
 
+router.post('/:id/reviews', podcastsCtrl.createReview)
 
 export {
 	router
