@@ -12,6 +12,7 @@
         <th>Episode Number:</th>
         <th>Special Guest</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -24,8 +25,15 @@
         
           <td><%= podcast.guest %></td>
           <td><a href="/podcast/<%= podcast._id %>">DETAILS</a></td>
+          <td>
+            <form 
+              action="/podcasts/<%= podcast._id %>?_method=DELETE"
+              method="POST"
+            >
+              <button>X</button>
+            </form>
+          </td>
         </tr>
-      <%# Close the forEach using EJS here %>
       <% }) %>
     </tbody>
   </table>

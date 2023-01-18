@@ -1,5 +1,17 @@
 import { Podcast } from "../models/podcast.js"
 
+
+function deletePodcast(req, res) {
+  Podcast.findByIdAndDelete(req.params.id)
+  .then(podcasts => {
+    res.redirect("/podcast")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/podcast")
+  })
+}
+
 function newPodcast(req, res) {
   res.render("podcasts/new", {
     title: "Add Podcast"
@@ -55,4 +67,5 @@ export {
   create,
   newPodcast as new, 
   show,
+  deletePodcast as delete,
   }

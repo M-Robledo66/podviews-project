@@ -13,6 +13,8 @@ router.post('/', podcastsCtrl.create)
 
 router.get('/:id', podcastsCtrl.show)
 
+router.delete("/:id", podcastsCtrl.delete)
+
 
 
 export {
