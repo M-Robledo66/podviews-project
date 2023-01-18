@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
+<%- include('../partials/nav') %>
+
+<main>
+
+
+    <h1><%= title %></h1>
+    <form id="new-form" action="/podcasts" method="POST">
+      <label for="title-input">Title:</label>
+      <input type="text" name="title" id="title-input">
+      <label for="EpisodeNo">EpisodeNo:</label>
+      <input required type="EpisodeNo" name="EpisodeNo" id="EpisodeNo">
+      <label for="host-input">Host:</label>
+      <input type="text" name="host" id="host-input">
+      <label for="guest-input">Specail Guest:</label>
+      <input type="text" name="guest" id="guest-input">
+      <label for="link-input">URL Link:</label>
+      <input type="text" name="link" id="link-input">
+
+      <button type="submit">Add Podcast</button>
+    
+
+    </form>
+    </main>
+
+
+<%- include("../partials/footer") %>

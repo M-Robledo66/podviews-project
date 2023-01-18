@@ -1,0 +1,15 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Podviews!</h1>
+  <h2>All the Podcasts!</h2>
+	<ul>
+  <% podcasts.forEach(podcast => { %>
+    <li>💬 <%= podcast.name %> is <%= podcast.recommend ? 'recommend' : 'not recommend' %></li>
+  <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
