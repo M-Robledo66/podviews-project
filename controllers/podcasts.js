@@ -27,11 +27,25 @@ function index(req, res) {
     }
     Podcast.create(req.body)
     .then(podcast => {
-      res.redirect(`/podcast/${podcast._id}`)
+      res.redirect(`/podcasts${podcast._id}`)
     })
     .catch(err => {
       console.log(err)
       res.redirect('/podcasts')
+    })
+  }
+
+function show(req, res) {
+  Podcast.findById(req.params.id)
+  .then(podcast => {
+      res.render('podcasts/show', {
+        title: "Podcast Detail",
+        podcast: podcast,
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect("/podcasts")
     })
   }
   
@@ -40,4 +54,5 @@ export {
   index,
   create,
   newPodcast as new, 
+  show,
   }

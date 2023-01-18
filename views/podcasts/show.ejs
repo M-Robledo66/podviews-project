@@ -2,7 +2,25 @@
 <link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
 <%- include('../partials/nav') %>
 
-<section id="show-page">
-    <div> Title: </div>
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Title: </div>
+    <div>
+      <%= podcast.title %>
+      <a href="/podcasts/<%= podcast._id %>/edit">
+        <button>Edit Podcast</button>
+      </a>
+    </div>
+    <div>Episode Number: </div>
+    <div><%= podcast.EpisodeNo %></div>
+    <div>Host: </div>
+    <div><%= podcast.host %></div>
+    <div>Special Guest: </div>
+    <div><%= podcast.guest %></div>
+    <div>URL Link: </div>
+    <div><%= podcast.link %></div>
 </section>
-<%- include("../partials/footer") %>
+</main>
+  
+<%- include('../partials/footer') %>

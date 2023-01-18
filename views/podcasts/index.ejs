@@ -10,9 +10,8 @@
       <tr>
         <th>Title</th>
         <th>Episode Number:</th>
-        <th>Host</th>
         <th>Special Guest</th>
-        <th>URL Link</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -22,9 +21,9 @@
       <tr>
           <td><%= podcast.title %></td>
           <td><%= podcast.EpisodeNo %></td>
-          <td><%= podcast.host %></td>
+        
           <td><%= podcast.guest %></td>
-          <td><%= podcast.link  %></td>
+          <td><a href="/podcast/<%= podcast._id %>">DETAILS</a></td>
         </tr>
       <%# Close the forEach using EJS here %>
       <% }) %>
