@@ -15,9 +15,9 @@ html {
     background-color: #1a1a1a;
     color: #f6f6f6;
     /* Use a system font, if none are available use any found sans-sarif font */
-    font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-      'Helvetica Neue', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     margin: 0;
+    background-image: url("/videos/lake.jpeg");
   }
   
   nav {
@@ -28,6 +28,7 @@ html {
     padding: 10px;
     min-height: 60px;
   }
+
   
   main {
     display: flex;
@@ -39,4 +40,6 @@ html {
   .right {
     margin-left: auto;
   }
-  
+  #font{
+    font-family: 'Chakra Petch', sans-serif;
+  }

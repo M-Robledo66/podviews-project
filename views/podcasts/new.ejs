@@ -3,22 +3,20 @@
 <%- include('../partials/nav') %>
 
 <main>
-
-
     <h1><%= title %></h1>
     <form id="new-form" action="/podcasts" method="POST">
       <label for="title-input">Title:</label>
-      <input type="text" name="title" id="title-input">
+      <input Required type="text" name="title" id="title-input">
       <label for="EpisodeNo">EpisodeNo:</label>
-      <input required type="EpisodeNo" name="EpisodeNo" id="EpisodeNo">
+      <input type="EpisodeNo" name="EpisodeNo" id="EpisodeNo">
       <label for="host-input">Host:</label>
-      <input type="text" name="host" id="host-input">
+      <input Required type="text" name="host" id="host-input">
       <label for="guest-input">Specail Guest:</label>
       <input type="text" name="guest" id="guest-input">
       <label for="link-input">URL Link:</label>
       <input type="text" name="link" id="link-input">
 
-      <button type="submit">Add Podcast</button>
+      <button type="submit" id="addbtn">Add Podcast</button>
     
 
     </form>

@@ -6,12 +6,8 @@
 
 
     <h1><%= title %></h1>
-    <form 
-    id="new-form" 
-    action="/podcasts/<%= podcast._id %>?_method=PUT" 
-    method="POST"
-  >
-    
+    <% if (user) { %> 
+    <form id="new-form" action="/podcasts/<%= podcast._id %>?_method=PUT" method="POST">
       <label for="title-input">Title:</label>
       <input type="text" name="title" value="<%= podcast.title %>" id="title-input">
 
@@ -34,9 +30,8 @@
     <input type="text" name="link" value="<%= podcast.link %>" id="link-input">
 
       <button type="submit"> Save Podcast Edit </button>
-    
-
-    </form>
+     </form>
+     <% } %>
     </main>
 
 

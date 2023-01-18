@@ -1,15 +1,17 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
+
+
+
 <%- include('../partials/nav') %>
 
 
-<main>
+<main id="font">
   <h1>Podcast List</h1>
   <table>
-    <thead>
+    <thead id="font">
       <tr>
         <th>Title</th>
-        <th>Episode Number:</th>
         <th>Special Guest</th>
         <th></th>
         <th></th>
@@ -21,8 +23,6 @@
       <% podcasts.forEach(podcast => { %>
       <tr>
           <td><%= podcast.title %></td>
-          <td><%= podcast.EpisodeNo %></td>
-        
           <td><%= podcast.guest %></td>
           <td><a href="/podcasts/<%= podcast._id %>">DETAILS</a></td>
           <td>

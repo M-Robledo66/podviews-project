@@ -3,7 +3,7 @@ import { Podcast } from "../models/podcast.js"
 
 function createReview(req, res) {
 Podcast.findById(req.params.id)
-  .then(podcast => {
+  .then(podcasts => {
     podcast.reviews.push(req.body)
     podcast.save()
     .then(() => {
@@ -30,7 +30,7 @@ function update(req, res) {
     // req.body.releaseYear is "" so we delete it.
   }
   Podcast.findByIdAndUpdate(req.params.id, req.body, {new: true})
-  .then(podcast => {
+  .then(podcasts => {
     res.redirect(`/podcasts/${podcast._id}`) 
   })
   .catch(err => {
@@ -77,8 +77,9 @@ function index(req, res) {
   Podcast.find({})
     .then(podcasts => {
       res.render('podcasts/index', {
-       podcasts: podcasts,
+        podcasts,
        title: "All Podcast",
+       
       })
     })
     .catch(error => {
@@ -93,7 +94,7 @@ function index(req, res) {
       if (req.body[key] === '') delete req.body [key]
     }
     Podcast.create(req.body)
-    .then(podcast => {
+    .then(podcasts => {
       res.redirect(`/podcasts${podcast._id}`)
     })
     .catch(err => {

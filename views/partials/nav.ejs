@@ -3,14 +3,24 @@
   <% } %>
 </head>
 <body>
+  
   <nav>
-    <a href="/podcasts/new">New Podcast</a>
-    
-    <a href="/podcasts"> All Podcast's</a>
-    
+    <i class="fas fa-sharp fa-solid fa-people-arrows fa-2x"></i>
+    <a 
+    href="/podcasts/new" <%- title === "New Podcast" ? 'class="active"' : "" %>
+  >
+    New Podcast
+  </a>
+  <a 
+    href="/podcasts" <%- title === "All Podcast" ? 'class="active"' : "" %>
+  >
+    All Podcast
+  </a>
+
+  
     <% if (user) { %>
       <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
+        <button type="submit" id="font">Logout</button>
       </a>
     <% } else { %>
       <div 
@@ -19,6 +29,7 @@
         data-login_uri="/auth/google"
         data-auto_prompt="false"
       ></div>
+
       <div 
         class="g_id_signin right"
         data-type="standard"
@@ -29,4 +40,5 @@
         data-logo_alignment="left"
       ></div>
     <% } %>
+
   </nav>
