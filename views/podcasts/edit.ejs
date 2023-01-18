@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
+<link rel="stylesheet" href="/stylesheets/podcasts/edit.css" />
 <%- include('../partials/nav') %>
 
 <main>
@@ -8,7 +8,7 @@
     <h1><%= title %></h1>
     <form 
     id="new-form" 
-    action="/movies/<%= movie._id %>?_method=PUT" 
+    action="/podcasts/<%= podcast._id %>?_method=PUT" 
     method="POST"
   >
     
@@ -16,8 +16,7 @@
       <input type="text" name="title" value="<%= podcast.title %>" id="title-input">
 
       <label for="EpisodeNo">EpisodeNo:</label>
-    
-      <input 
+        <input 
         type="text" 
         name="EpisodeNo"
         value="<%= podcast.EpisodeNo %>"
@@ -25,18 +24,16 @@
       >
 
       <label for="host-input">Host:</label> 
-      <input type="text" name="host" value="<%= podcast.host %>" id="host-input
+      <input type="text" name="host" value="<%= podcast.host %>" id="host-input">
 
 
       <label for="guest-input">Specail Guest:</label>
-      <input type="text" name="guest" value="<%= podcast.guest %>" id="guest-input
+      <input type="text" name="guest" value="<%= podcast.guest %>" id="guest-input">
 
       <label for="link-input">URL Link:</label>
-      <input type="text" name="link" id="link-input">
-     
-      <input type="text" name="link" value="<%= podcast.link %>" id="link-input
+    <input type="text" name="link" value="<%= podcast.link %>" id="link-input">
 
-      <button type="submit">Add Podcast</button>
+      <button type="submit"> Save Podcast Edit </button>
     
 
     </form>
