@@ -14,7 +14,7 @@ router.post('/', isLoggedIn, podcastsCtrl.create)
 
 router.get('/:id', podcastsCtrl.show)
 
-router.delete("/:id", podcastsCtrl.delete)
+router.delete("/:id", isLoggedIn, podcastsCtrl.delete)
 
 router.get("/:id/edit", podcastsCtrl.edit)
 
