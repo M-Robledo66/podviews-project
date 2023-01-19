@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/podcasts/new.css" />
+<link rel="stylesheet" href="/stylesheets/podcasts/show.css" />
 <%- include('../partials/nav') %>
 
 <main>
@@ -9,6 +9,7 @@
     <div>
       <%= podcast.title %>
       <a href="/podcasts/<%= podcast._id %>/edit">
+        <% if (user) { %> 
         <button>Edit Podcast</button>
       </a>
     </div>
@@ -68,6 +69,7 @@
   </table>
 <% } else { %>
   <h3>No Reviews Yet</h3>
+<% } %>
 <% } %>
 </main>
   

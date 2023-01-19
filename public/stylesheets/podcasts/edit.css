@@ -43,3 +43,9 @@ html {
   #font{
     font-family: 'Chakra Petch', sans-serif;
   }
+  #new-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
