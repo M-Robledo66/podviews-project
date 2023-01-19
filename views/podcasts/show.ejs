@@ -8,10 +8,6 @@
     <div>Title: </div>
     <div>
       <%= podcast.title %>
-      <a href="/podcasts/<%= podcast._id %>/edit">
-        <% if (user) { %> 
-        <button>Edit Podcast</button>
-      </a>
     </div>
     <div>Episode Number: </div>
     <div><%= podcast.EpisodeNo %></div>
@@ -21,6 +17,10 @@
     <div><%= podcast.guest %></div>
     <div>URL Link: </div>
     <div><%= podcast.link %></div>
+    <a href="/podcasts/<%= podcast._id %>/edit">
+      <% if (user) { %> 
+      <button>Edit Podcast</button>
+    </a>
 </section>
 </section>
 <% // new markup below %>

@@ -4,7 +4,7 @@
 </head>
 <body>
   
-  <nav>
+  <nav id="navbar">
     <i class="fas fa-solid fa-eye fa-2x"></i>
  
     <a 
@@ -21,7 +21,7 @@
   
     <% if (user) { %>
       <a href="/auth/logout" class="right">
-        <button type="submit" id="font">Logout</button>
+        <button type="submit" id="button">Logout</button>
       </a>
     <% } else { %>
       <div 
@@ -35,7 +35,7 @@
         class="g_id_signin right"
         data-type="standard"
         data-size="large"
-        data-theme="outline"
+        data-theme="filled_black"
         data-text="sign_in_with"
         data-shape="rectangular"
         data-logo_alignment="left"

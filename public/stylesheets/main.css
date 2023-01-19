@@ -26,10 +26,7 @@ html {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    background-image: url("../../videos/lake.jpeg");
- 
+    align-items: center;  
     padding: 20px;
   }
   
@@ -39,7 +36,7 @@ html {
   
   body > nav {
     grid-area: nav;
-    background-color: #b8c0c2;
+    background-color: #1c2e4a;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -57,7 +54,7 @@ html {
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
-    color: #424748;
+    color: white;
     font-family: 'Chakra Petch', sans-serif;
   }
   

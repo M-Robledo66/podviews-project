@@ -1,15 +1,12 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/show.css" />
-
-
-
 <%- include('../partials/nav') %>
 
 
 <main id="font">
 
   <h1>Podcast List</h1>
-  <table>
+  <table id="thetable">
     <thead id="font">
       <tr>
         <th>Title</th>
@@ -25,14 +22,15 @@
       <tr>
           <td><%= podcast.title %></td>
           <td><%= podcast.guest %></td>
-          <td><a href="/podcasts/<%= podcast._id %>">DETAILS</a></td>
+          <td><a href="/podcasts/<%= podcast._id %>" id="detaillink">DETAILS</a></td>
           <td>
+          
             <form 
               action="/podcasts/<%= podcast._id %>?_method=DELETE"
-              method="POST"
-            >
-              <button>X</button>
+              method="POST">
+              <button id="button">X</button>
             </form>
+           
           </td>
         </tr>
       <% }) %>
