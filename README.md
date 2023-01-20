@@ -42,10 +42,11 @@ Miguel Robledo - miguelrobledo773@gmail.com
 ---
 
 ## IceBox :icecube:
-- [ ]Add the option to add a fifth circle to connect
+- [ ] Add the option to add podcast to favorites
 - [ ] Add a dark and light mode buttons
-- [ ] Add an animation to hover each div
-- [ ] Add an animation when the winner is announced. 
+- [ ] Have the ability to have a section to discuss about 
+- [ ] Have the ability to share snippets from a certain podcast
+- [ ]
 
 
 

@@ -19,7 +19,7 @@
     <div><%= podcast.link %></div>
     <a href="/podcasts/<%= podcast._id %>/edit">
       <% if (user) { %> 
-      <button>Edit Podcast</button>
+      <button id="button">Edit Podcast</button>
     </a>
 </section>
 </section>
@@ -46,7 +46,7 @@
     <option value="9">9</option>
     <option value="10" selected>10</option>
   </select>
-  <button type="submit">Add Review</button>
+  <button type="submit" id="button">Add Review</button>
 </form>
 <% if (podcast.reviews.length) { %>
   <table>

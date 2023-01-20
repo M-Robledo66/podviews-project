@@ -1,24 +1,24 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/show.css" />
+<link rel="stylesheet" href="https://unpkg.com/transition-style">
 <%- include('../partials/nav') %>
 
 
-<main id="font">
-
+<main id="font" transition-style="in:wipe:bottom-right">
   <h1>Podcast List</h1>
-  <table id="thetable">
-    <thead id="font">
-      <tr>
+    <table id="thetable">
+      <thead id="font">
+        <tr>
         <th>Title</th>
-        <th>Special Guest</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+          <th>Special Guest</th>
+            <th></th>
+          <th></th>
+        </tr>
+      </thead>
     <tbody>
       <%# Oh hey, this is an ejs comment! It starts with a # %>
       <% podcasts.forEach(podcast => { %>
-      <tr>
+        <tr>
           <td><%= podcast.title %></td>
           <td><%= podcast.guest %></td>
           <td><a href="/podcasts/<%= podcast._id %>" id="detaillink">DETAILS</a></td>
