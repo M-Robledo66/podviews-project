@@ -1,6 +1,8 @@
 # Podviews
 
- <img width="697"  src="">
+![Alt text](./assets/podcast-home.jpg)
+![Alt text](./assets/podcast-list.jpg)
+![Alt text](./assets/podcast-edit.jpg)
 
 
 
