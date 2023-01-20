@@ -12,12 +12,7 @@
       <input type="text" name="title" value="<%= podcast.title %>" id="title-input">
 
       <label for="EpisodeNo">EpisodeNo:</label>
-        <input 
-        type="text" 
-        name="EpisodeNo"
-        value="<%= podcast.EpisodeNo %>"
-        id="EpisodeNo"
-      >
+      <input type="text" name="EpisodeNo"value="<%= podcast.EpisodeNo %>" id="EpisodeNo">
 
       <label for="host-input">Host:</label> 
       <input type="text" name="host" value="<%= podcast.host %>" id="host-input">
@@ -27,12 +22,12 @@
       <input type="text" name="guest" value="<%= podcast.guest %>" id="guest-input">
 
       <label for="link-input">URL Link:</label>
-    <input type="text" name="link" value="<%= podcast.link %>" id="link-input">
+      <input type="text" name="link" value="<%= podcast.link %>" id="link-input">
 
       <button type="submit"> Save Podcast Edit </button>
-     </form>
-     <% } %>
-    </main>
+    </form>
+    <% } %>
+</main>
 
 
 <%- include("../partials/footer") %>

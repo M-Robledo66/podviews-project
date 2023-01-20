@@ -17,7 +17,6 @@
     </thead>
     <tbody>
       <%# Oh hey, this is an ejs comment! It starts with a # %>
-   
       <% podcasts.forEach(podcast => { %>
       <tr>
           <td><%= podcast.title %></td>
@@ -25,12 +24,9 @@
           <td><a href="/podcasts/<%= podcast._id %>" id="detaillink">DETAILS</a></td>
           <td>
           
-            <form 
-              action="/podcasts/<%= podcast._id %>?_method=DELETE"
-              method="POST">
+            <form action="/podcasts/<%= podcast._id %>?_method=DELETE" method="POST">
               <button id="button">X</button>
             </form>
-           
           </td>
         </tr>
       <% }) %>
