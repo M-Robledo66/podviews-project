@@ -56,10 +56,8 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
 }
 #button{
-    
   color: rgb(23, 36, 42);
   position: relative;
   padding: 12px 36px;

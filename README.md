@@ -46,7 +46,7 @@ Miguel Robledo - miguelrobledo773@gmail.com
 - [ ] Add a dark and light mode buttons
 - [ ] Have the ability to have a section to discuss about 
 - [ ] Have the ability to share snippets from a certain podcast
-- [ ]
+- [x] Add an animation to either a page or a div
 
 
 
